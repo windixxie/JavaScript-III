@@ -36,7 +36,19 @@ const me = {
 
 // code example for New Binding
 
+function boyfriend(greeter) {
+    this.greeting = 'Hello ';
+    this.greeter = greeter;
+    this.speak = function() {
+        console.log(this.greeting + this.greeter);
+    };
+}
 
+const myles = new boyfriend('Recny');
+const recny = new boyfriend('Myles')
+
+myles.speak();
+recny.speak();
 
 // Principle 4
 
